@@ -16,11 +16,6 @@ class PostSerializer(serializers.ModelSerializer):
         fields = ("id", "text", "author", "pub_date", "group")
         model = Post
 
-    def validate(self, data):
-        if data["text"] == "":
-            raise serializers.ValidationError("Пустое поле!")
-        return data
-
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
