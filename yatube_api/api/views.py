@@ -56,7 +56,7 @@ class FollowViewSet(
     mixins.CreateModelMixin,
     mixins.ListModelMixin,
     viewsets.GenericViewSet
-    ):
+):
     serializer_class = FollowSerializer
     permission_classes = [IsAuthenticated]
 
